@@ -16,4 +16,4 @@ class Linter(BaseLinter):
 
             if match:
                 error, line = match.group('error'), match.group('line')
-                self.add_message(int(line), lines, error, errorMessages)
+                self.add_message(int(line)-1, lines, error, errorMessages)
